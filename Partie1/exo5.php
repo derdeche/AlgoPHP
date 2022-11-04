@@ -4,4 +4,6 @@
  <h2>Résultat</h2>
 
  <?php
-d
+ $francs = "100";
+ $euro = $francs*0.1524;
+ echo"la valeur en euros et $euro";

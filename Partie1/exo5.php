@@ -6,4 +6,6 @@
  <?php
  $francs = "100";
  $euro = $francs*0.1524;
+ $euro = number_format("$euro",2,",",".");
+ 
  echo"la valeur en euros et $euro";

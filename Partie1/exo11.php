@@ -6,3 +6,6 @@
 
 <?php
 
+$cars = array("Peugeot", "Renault", "BMW", "Mercedes");
+ech Dans ce tableau il y a . count($cars) ;
+echo $cars[0] . " <br> " . $cars[1]  . " <br> "  .  $cars[2]  .  " <br> "  .  $cars[3] ;

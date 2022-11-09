@@ -8,6 +8,7 @@
 $MPayer = "152";
 $MVersé = "200";
 $reste = ($MVersé - $MPayer);
+
  echo "Montant à payer : $MPayer <br> ";
  echo " Montant versé : $MVersé <br>";
  echo " Reste à payer : $reste <br>";

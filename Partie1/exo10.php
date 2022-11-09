@@ -19,4 +19,4 @@ $reste = ($MVersé - $MPayer);
  $piece2 = intdiv($reste,2) ;
  $reste = $reste - 2* $piece2;
  $piece1 = intdiv($reste,1);
- echo "$billet10 billets de 10 € - $billet5 billet de 5 € - $piece2 pièce de 2 € - $piece1 pièce de 1 €";
+ echo "$billet10 billets de 10 € - $billet5 billet de 5 € - $piece2 pièce de 2 € - $piece1 pièce de 1 €" ;

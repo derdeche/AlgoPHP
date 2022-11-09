@@ -15,7 +15,6 @@ $cond2 = $age > 20 &&  $sexe == "homme" ;
 if($cond1 || $cond2 ){
     
     echo "La personne est Imposable. <br>";
-
 }
 else {
    

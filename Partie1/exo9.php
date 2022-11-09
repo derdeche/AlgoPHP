@@ -5,17 +5,20 @@ plus de 20 ans, alors celle-ci est imposable (sinon ce n’est pas le cas, « no
 <h2>Résultat</h2>
 
 <?php
-$sexe = 'femme';
-$age = '50';
-$cond1 = $sexe ="femme" && ( $age <= 18 && $age <=35);
+$sexe = 'homme';
+$age = '19';
+$cond1 = $sexe =="femme" && ( $age <= 18 && $age <=35);
 $cond2 = $age > 20 &&  $sexe == "homme" ;
+    echo "Age : $age <br>";
+    echo "Sexe : $sexe <br> ";
 
 if($cond1 || $cond2 ){
-    echo "Imposable <br>";
+    
+    echo "La personne est Imposable. <br>";
 
 }
 else {
    
-    echo " Non Imposable";
+    echo " La personne est Non Imposable";
 }
     

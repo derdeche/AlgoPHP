@@ -3,3 +3,35 @@
 et de langue associée (tableau contenant clé et valeur), dire bonjour aux différentes personnes dans leur langue respective 
 (français ➔ « Salut », anglais ➔ « Hello », espagnol ➔ « Hola »)</p>
 <h2>Résultat</h2>
+
+<?php
+
+
+$prenom = array( "michael" =>"FR",'Virgile' => 'ESP', 'Marie-Claire' => 'ENG');
+asort($prenom);
+
+
+
+
+
+
+foreach($prenom as $a => $valeur){
+    
+
+
+    if($valeur == 'FRA')
+    {
+        echo "salut ".$a."<br>";
+
+    }
+    elseif($valeur == 'ESP')
+    {
+        echo 'hola '.$a. "<br>";
+    }
+    else
+
+        echo 'hello '.$a."<br>" ;
+
+}
+
+?>

@@ -14,7 +14,7 @@
 for ($i='1'; $i<='10'; $i++)
 {
     $résultat= $nombre * $i;
-    echo $nombre . " * " .  $i . " = " . $résultat . "<br>";
+    echo "$nombre  *  $i  =  $résultat <br>";
 } 
 
 echo "2 éme methode" . "<br>";

@@ -4,16 +4,12 @@ et de langue associée (tableau contenant clé et valeur), dire bonjour aux diff
 (français ➔ « Salut », anglais ➔ « Hello », espagnol ➔ « Hola »)</p>
 <h2>Résultat</h2>
 
+
 <?php
 
+$prenom = ['Michael' =>'FRA','Virgile' => 'ESP', 'Marie-Claire' => 'ENG'];
 
-$prenom = array( "michael" =>"FR",'Virgile' => 'ESP', 'Marie-Claire' => 'ENG');
-asort($prenom);
-
-
-
-
-
+ksort($prenom);
 
 foreach($prenom as $a => $valeur){
     
@@ -21,16 +17,16 @@ foreach($prenom as $a => $valeur){
 
     if($valeur == 'FRA')
     {
-        echo "salut ".$a."<br>";
+        echo "salut $a <br>";
 
     }
     elseif($valeur == 'ESP')
     {
-        echo 'hola '.$a. "<br>";
+        echo "hola $a <br>";
     }
     else
 
-        echo 'hello '.$a."<br>" ;
+        echo "hello   $a  <br>" ;
 
 }
 

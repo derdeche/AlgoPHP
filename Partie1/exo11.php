@@ -8,7 +8,7 @@
 
 $cars = array("Peugeot", "Renault", "BMW", "Mercedes");
 $nbmarques = count($cars);
-echo "Dans ce tableau il y a  $nbmarques de voitures <br>" ;
+echo "Dans ce tableau il y a  $nbmarques marques de voitures <br>" ;
 echo $cars[0] . " <br> " . $cars[1]  . " <br> "  .  $cars[2]  . " <br> " . $cars[3] . " <br>";
 ?>
 

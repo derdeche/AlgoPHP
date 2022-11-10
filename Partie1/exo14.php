@@ -15,4 +15,5 @@ $today = new Datetime(date('21.05.2018')); // Date aujourdhui
 $diff = $today->diff($bday);
 printf(' Age de la personne : %d ans  %d mois  %d jours', $diff->y, $diff->m, $diff->d);
 printf("\n");
+
 ?>

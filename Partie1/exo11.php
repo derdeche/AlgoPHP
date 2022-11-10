@@ -7,5 +7,5 @@
 <?php
 
 $cars = array("Peugeot", "Renault", "BMW", "Mercedes");
-echo "Dans ce tableau il y a   .  count[$cars]   .    <br>" ;
+echo "Dans ce tableau il y a    count[$cars]    <br>" ;
 echo $cars[0] . " <br> " . $cars[1]  . " <br> "  .  $cars[2]  . " <br> " . $cars[3] . " <br>";

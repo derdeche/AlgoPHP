@@ -19,22 +19,29 @@ de caractère passée en argument en majuscules et en rouge.</p><br>
 
 
 $text = "Mon texte en paramètre";
+$text2 = "Mon texte en paramètre 2 ";
 
-
-
+echo convertirMajRouge2($text);
 
 echo convertirMajRouge($text);
 
+echo convertirMajRouge($text2);
 
 function convertirMajRouge($text) {
 
 
 
-    $resultat = mb_strtoupper($text);
+    $resultat = mb_strtoupper($text); //convertir en majuscule
     $resultat = "<p class= 'red'> $resultat</p>";
    
 
     return $resultat;
     
 }
-?>
+
+ function convertirMajRouge2($text)
+ {
+    return "<p class='red'>".mb_strtoupper($text)."</p>";
+ }
+
+ ?>

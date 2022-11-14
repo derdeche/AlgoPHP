@@ -37,3 +37,4 @@ function convertirMajRouge($text) {
     return $resultat;
     
 }
+?>

@@ -43,5 +43,4 @@ function convertirMajRouge($text) {
  {
     return "<p class='red'>".mb_strtoupper($text)."</p>";
  }
-
  ?>

@@ -27,6 +27,7 @@ echo convertirMajRouge($text);
 
 echo convertirMajRouge($text2);
 
+
 function convertirMajRouge($text) {
 
 

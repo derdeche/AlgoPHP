@@ -13,7 +13,7 @@ $capitales = array ("France"=>"Paris","Allemagne"=>"Berlin","USA"=>"Washington",
 
 <?php
 
-$lien= 
+
 
 $capitales = [
 
@@ -61,32 +61,24 @@ function afficherTableHtml($capitales) {
 
           </tbody>" ;
 
-          ksort($capitales);
+         
 
 foreach ($capitales as $pays => $capitale){
 
     $result .= "<tr>
 
-                    <td>$pays</td>
+                    <td>$pays</td>  
 
                     <td>$capitale</td>
-                    
 
-                   
-
-   
-
-              
-                    
+                    <td><a href='https://fr.wikipedia.org/wiki/$capitale' target='_blank'>lien</td>;
+                                      
+                                
                 </tr>";
 
-                
-    
+ksort($capitales);
 
-                 
-
-
-}
+}                        
 
 
 $result .= "</tbody></table>";

@@ -20,7 +20,7 @@ $nomsInput = array("Nom","Prénom","Ville");
 echo afficherInput($nomsInput);
 
 function afficherInput($nomsInput){
-
+    $resultat = "";
     foreach ($nomsInput as $utilisateur){
         $resultat.= "<label for='$utilisateur'><br>$utilisateur</label><br><input type='texte' name= $utilisateur<br>";
         

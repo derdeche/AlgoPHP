@@ -1,8 +1,20 @@
 <h1>Exercice11</h1>
 
-<p>En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire complet qui contient 
-les informations suivantes : champs de texte avec nom, prénom, adresse e-mail, ville, sexe et une liste de choix parmi lesquels 
-on pourra sélectionner un intitulé de formation : « Développeur Logiciel », « Designer web », « Intégrateur » ou « Chef de projet ».</P>
-<p>Le formulaire devra également comporter un bouton permettant de le soumettre à un traitement de validation (submit).</P>
+<p>Ecrire une fonction personnalisée qui affiche une date en français (en toutes lettres) à partir d’une chaîne de caractère
+représentant une date.<br>
+Exemple: <br>
+formaterDateFr("2018-02-23");</P>
+
+<h2>Affichage</h2>
+
+<p>vendredi 23 février 2018</P>
 
 <h3>Résultat</h3>
+
+<?php
+
+
+
+   
+
+   

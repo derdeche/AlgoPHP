@@ -9,12 +9,6 @@ on pourra sélectionner un intitulé de formation : « Développeur Logiciel »,
 
 <?php
 
-
-
-
-
-
-
 $champs = array("Nom","Prénom","Adresse e-mail","Ville","Sexe");
 
 

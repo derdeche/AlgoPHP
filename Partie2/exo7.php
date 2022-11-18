@@ -9,4 +9,34 @@ tableau associatif si la case est cochée ou non.</P>
 
 <?php   
 
-$element
+
+
+
+
+$elements = array('Choix 1'=>"",'Choix 2'=>"checked",'Choix 3'=>"");
+
+
+function genererCheckbox($elements){
+
+    $result="";
+
+    foreach($elements as $case => $checked){
+
+        $result .= "<input type='checkbox' name='$case' $checked >";
+
+        $result .= "<label for='$case'>$case</label><br>";
+
+        
+
+        
+
+        
+       
+    }
+    return $result;
+
+}
+
+echo genererCheckbox($elements);
+
+?>

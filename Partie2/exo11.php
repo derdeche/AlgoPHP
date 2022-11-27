@@ -13,16 +13,16 @@ formaterDateFr("2018-02-23");</P>
 
 <?php
 
-
 formaterDateFr("2018-02-23");
 
-$date=date_create("2018-02-23");
+
+$date= date_create("2018-02-23");
 
 function formaterDateFr($date){
+   
 
-
-return $date;
-}
+    return $date;
+    }
 
 echo date_format($date,"l d F Y");
 

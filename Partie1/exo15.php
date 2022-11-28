@@ -13,7 +13,7 @@ Alice DUCHEMIN a … ans<br></P>
 <h2>Résultat</h2>
 
 <?php
-class personne {
+class Personne {
     private $_nom;
     private $_prénom;
     private $_Anniversaire;
@@ -25,7 +25,7 @@ class personne {
     
         $this->_prénom=$prénom;   
     
-        $this->_Anniversaire=$Anniversaire;
+        $this->_Anniversaire=new DateTime($Anniversaire);
     }
 
     public function getNom(){
@@ -37,10 +37,10 @@ class personne {
     }
     
     public function Age(){
-        $today= Datetime();
+        $today= new DateTime();
         $Anniversaire = ($this->_Anniversaire);
         $diff = date_diff($Anniversaire, $today);
-        return $diff ("%y ans %m mois %d jours");
+        return $diff->format("%y ans %m mois %d jours");
     }
 
     public function getAnniversaire(){
@@ -57,7 +57,7 @@ class personne {
     }
 
     public function __tostring(){
-        return $this->_prénom.  $this->_nom. " a". $this->age()."<br>";
+        return $this->_prénom." ".  $this->_nom. " a ". $this->age()."<br>";
     
     }
 
@@ -65,6 +65,7 @@ class personne {
         return $this->$Anniversaire = $Anniversaire;
     }
 
+}
     $p1 = new Personne("DUPONT", "Michel", "1980-02-19");
     $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
 
@@ -77,7 +78,9 @@ class personne {
     echo $p1;
     $p1->setanniversaire("2022-11-25");
 
-}
+    echo $p2;
+
+
 ?>
 
 

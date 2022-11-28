@@ -56,14 +56,17 @@ class Personne {
         $this->_prénom= $newPrénom;
     }
 
+    public function setAnniversaire($Anniversaire){
+        return $this->$Anniversaire = $Anniversaire;
+
+    }
+
     public function __tostring(){
         return $this->_prénom." ".  $this->_nom. " a ". $this->age()."<br>";
     
     }
 
-    public function setAnniversaire($Anniversaire){
-        return $this->$Anniversaire = $Anniversaire;
-    }
+  
 
 }
     $p1 = new Personne("DUPONT", "Michel", "1980-02-19");
@@ -79,6 +82,13 @@ class Personne {
     $p1->setanniversaire("2022-11-25");
 
     echo $p2;
+    $p2->setNom("DUCHEMIN");
+
+    echo $p2;
+    $p2->setPrénom("Alice");
+
+    echo $p2;
+    $p2->setanniversaire("1985-01-17");
 
 
 ?>

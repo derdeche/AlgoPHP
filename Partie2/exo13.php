@@ -16,53 +16,96 @@ v2 ➔"Citroën","C4",3 </p>
     private $_marque;
     private $_modéle;
     private $_nbPortes;
-    private $_vitesseActuelle;
-    private $_ralentirVitesse;
+    private $_vitesseActuelle=0;
+    private $_mode;
+   
+}
 
- }
-
- function __construct($marque,$modéle,$nbPortes,$vitesseActuelle,$ralentirVitesse){
+ function __construct($marque,$modéle,$nbPortes,$vitesseActuelle){
     $this->_marque = $marque;
     $this->_modéle = $modéle;
     $this->_nbPortes = $nbPortes;
-    $this->_vitesseActuelle = $vitesseActuelle;
-    $this->_ralentirVitesse = $ralentirVitesse;
- }
+    $this->_vitesseActuelle = 0;
+    $this->_mode=true;
+    
+}
 
 public function getmarque(){
     return $this->_marque;
 }
+
 public function setmarque($marque){
     $this->_marque = $marque;
     return $this; 
 }
+
 public function getmodéle(){
     return $this->_modéle;
 }
+
 public function setmodéle($modéle){
     $this->_modéle=$modéle;
     return $this;
 }
+
 public function getnbPortes(){
     return $this->_nbPortes;
 }
+
 public function setnbPortes($nbPortes){
     $this->_nbPortes=$nbPortes;
     return $this;
 }
+
 public function getvitesseActuelle(){
-    return $this->_vitesseActuelle;
+    return "la vitesse de" .$this->_marque. " ".$this->_modéle. "est de" .$this->vitesseActuelle. "km/h" <br>;
+
 }
-public function setvitesseActuelle(){
-    $this->_vitesseActuelle=$vitesseActuelle;
+
+public function setvitesseActuelle($vitesse){
+    $this->_vitesseActuelle = $vitesse;
+    return $this->vitesseActuelle = $vitesse;
+}
+
+public function getmode(){
+    $this->_mode;
+}
+
+public function setmode($mode){
+    $this->_mode=$mode;
     return $this;
 }
-public function getralentirVitesse(){
-    return $this->_ralentirVitesse;
+
+public function demarer(){
+    $this->_mode = true;
+    echo "le véhicule".$this->_marque. " " .$this->_modéle . "est démarré"<br>;
 }
-public function setralentirVitesse(){
-    $this->_ralentirVitesse=$ralentirVitesse;
-    return $this;
+
+public function stopper(){
+    $this->_mode= false;
+    echo  "le véhicule". $this->_marque. " " .$this->modéle ."est à l'arrét"<br>;
 }
+
+public function acceleration($vitesse)
+    if ($this->_vitesseActuelle += $vitesse){
+    echo "la vitesse du véhicule".$this->marque. "" .$this->_modéle. "est". $vitesse. "km/h" <br>;
+}
+    else{
+        echo "la vitesse du véhicule".$this->marque. "" .$this->modéle. "est" .$vitesse. "km/h" <br>;
+}
+
+public function ralentissement($ralenti)
+    if ()
+
+
+
+
+
+
+
+
+
+
+
 
 

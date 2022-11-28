@@ -20,4 +20,4 @@ else {
    
     echo " La personne est Non Imposable";
 }
-    
+

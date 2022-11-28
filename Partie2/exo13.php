@@ -25,10 +25,44 @@ v2 ➔"Citroën","C4",3 </p>
     $this->_marque = $marque;
     $this->_modéle = $modéle;
     $this->_nbPortes = $nbPortes;
-    $this->_vitesseactuelle = $vitesseActuelle;
+    $this->_vitesseActuelle = $vitesseActuelle;
     $this->_ralentirVitesse = $ralentirVitesse;
  }
 
-
+public function getmarque(){
+    return $this->_marque;
+}
+public function setmarque($marque){
+    $this->_marque = $marque;
+    return $this; 
+}
+public function getmodéle(){
+    return $this->_modéle;
+}
+public function setmodéle($modéle){
+    $this->_modéle=$modéle;
+    return $this;
+}
+public function getnbPortes(){
+    return $this->_nbPortes;
+}
+public function setnbPortes($nbPortes){
+    $this->_nbPortes=$nbPortes;
+    return $this;
+}
+public function getvitesseActuelle(){
+    return $this->_vitesseActuelle;
+}
+public function setvitesseActuelle(){
+    $this->_vitesseActuelle=$vitesseActuelle;
+    return $this;
+}
+public function getralentirVitesse(){
+    return $this->_ralentirVitesse;
+}
+public function setralentirVitesse(){
+    $this->_ralentirVitesse=$ralentirVitesse;
+    return $this;
+}
 
 

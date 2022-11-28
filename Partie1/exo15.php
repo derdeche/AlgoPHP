@@ -1,5 +1,4 @@
 
-
 <h1>Exercice15</h1>
 
 <p>Créer une classe Personne (nom, prénom et date de naissance).<br>

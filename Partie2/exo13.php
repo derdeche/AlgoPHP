@@ -13,96 +13,90 @@ v2 ➔"Citroën","C4",3 </p>
 
  class Voiture{
 
-    private $_marque;
-    private $_modéle;
-    private $_nbPortes;
-    private $_vitesseActuelle=0;
-    private $_mode;
+    private string $_marque;
+    private string $_modele;
+    private  int $_nbportes;
+    private float $_vitesseactuelle;
+    private int $_mode;
    
-}
 
- function __construct($marque,$modéle,$nbPortes,$vitesseActuelle){
+
+ function __construct(string $marque,string $modele,int $nbportes, float $vitesseactuelle, int $mode){
     $this->_marque = $marque;
-    $this->_modéle = $modéle;
-    $this->_nbPortes = $nbPortes;
-    $this->_vitesseActuelle = 0;
-    $this->_mode=true;
+    $this->_modele = $modele;
+    $this->_nbPortes = $nbportes;
+    $this->_vitesseactuelle = $vitesseactuelle;
+    $this->_mode = $mode;
     
 }
 
-public function getmarque(){
+public function getMarque():string{
     return $this->_marque;
 }
 
-public function setmarque($marque){
+public function setMarque(string $marque){
     $this->_marque = $marque;
     return $this; 
 }
 
-public function getmodéle(){
-    return $this->_modéle;
+public function getModele():string{
+    return $this->_modele;
 }
 
-public function setmodéle($modéle){
-    $this->_modéle=$modéle;
+public function setModele(string $modele){
+    $this->_modele= $modele;
     return $this;
 }
 
-public function getnbPortes(){
-    return $this->_nbPortes;
+public function getNBPortes():int{
+    return $this->_nbportes;
 }
 
-public function setnbPortes($nbPortes){
-    $this->_nbPortes=$nbPortes;
+public function setNBPortes(int $portes){
+    $this->_nbportes=$portes;
     return $this;
 }
 
-public function getvitesseActuelle(){
-    return "la vitesse de" .$this->_marque. " ".$this->_modéle. "est de" .$this->vitesseActuelle. "km/h" <br>;
+public function getvitesse():float{
+    return $this->_vitesseactuelle;
 
 }
 
-public function setvitesseActuelle($vitesse){
-    $this->_vitesseActuelle = $vitesse;
-    return $this->vitesseActuelle = $vitesse;
+public function setvitess($vitesse){
+    $this->_vitesseactuelle = $vitesse;
+    return $this. "la vitesse est de" .$vitesse. "km/h";
 }
 
-public function getmode(){
-    $this->_mode;
+
+public function __tostring()
+{
+    return $this->_marque."".$this->_modele; 
 }
 
-public function setmode($mode){
-    $this->_mode=$mode;
-    return $this;
+public function getMode(){
+   return $this->_mode;
 }
 
-public function demarer(){
-    $this->_mode = true;
-    echo "le véhicule".$this->_marque. " " .$this->_modéle . "est démarré"<br>;
+public function setMode($mode){
+    $this->_mode = $mode;
+    
+    return " le vehicule est démarré";
 }
+        public function verifieStatut(){
+        if($this->_mode  === 0){
+        echo "le vehicule "." " . $this->_marque. " ".$this->_modele." n est pas demarré<br>";
+        }
 
-public function stopper(){
-    $this->_mode= false;
-    echo  "le véhicule". $this->_marque. " " .$this->modéle ."est à l'arrét"<br>;
-}
-
-public function acceleration($vitesse)
-    if ($this->_vitesseActuelle += $vitesse){
-    echo "la vitesse du véhicule".$this->marque. "" .$this->_modéle. "est". $vitesse. "km/h" <br>;
-}
-    else{
-        echo "la vitesse du véhicule".$this->marque. "" .$this->modéle. "est" .$vitesse. "km/h" <br>;
-}
-
-public function ralentissement($ralenti)
-    if ()
+        elseif ($this->_mode  === 1)
+            echo "le vehicule"." " .$this->_marque. " " .$this->_modele. " est demarré<br>";
+        }
+   
+    }
 
 
-
-
-
-
-
+$voiture1 = new voiture("peugeot","308","5","0","1");
+echo $voiture1->verifieStatut();
+ 
 
 
 

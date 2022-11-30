@@ -97,9 +97,9 @@
         public function verifieStatut()
         {
             if ($this->_mode  == 0) {
-                echo "le vehicule " . " " . $this->_marque . " " . $this->_modele . " n'est pas demarré <br>";
+                echo "le véhicule " . " " . $this->_marque . " " . $this->_modele . " n'est pas demarré <br>";
             } elseif ($this->_mode  = 1)
-                echo "le vehicule" . " " . $this->_marque . " " . $this->_modele . " est demarré <br>";
+                echo "le véhicule" . " " . $this->_marque . " " . $this->_modele . " est demarré <br>";
         }
     }
 

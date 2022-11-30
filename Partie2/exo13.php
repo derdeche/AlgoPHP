@@ -21,11 +21,11 @@ v2 ➔"Citroën","C4",3 </p>
    
 
 
- function __construct(string $marque,string $modele,int $nbportes, float $vitesseactuelle, int $mode){
+ function __construct(string $marque,string $modele,int $nbportes, float $vitesseActuelle, int $mode){
     $this->_marque = $marque;
     $this->_modele = $modele;
     $this->_nbPortes = $nbportes;
-    $this->_vitesseactuelle = $vitesseactuelle;
+    $this->_vitesseactuelle = $vitesseActuelle;
     $this->_mode = $mode;
     
 }
@@ -62,9 +62,9 @@ public function getvitesse():float{
 
 }
 
-public function setvitess($vitesse){
-    $this->_vitesseactuelle = $vitesse;
-    return $this. "la vitesse est de" .$vitesse. "km/h";
+public function setvitesse($vitesseActuelle){
+    $this->_vitesseactuelle = $vitesseActuelle;
+    return $this."la vitesse est de"." " .$vitesseActuelle."". "km/h";
 }
 
 
@@ -82,21 +82,24 @@ public function setMode($mode){
     
     return " le vehicule est démarré";
 }
+
         public function verifieStatut(){
-        if($this->_mode  === 0){
-        echo "le vehicule "." " . $this->_marque. " ".$this->_modele." n est pas demarré<br>";
+        if($this->_mode  == 0){
+        echo "le vehicule "." " . $this->_marque. " ".$this->_modele." n'est pas demarré <br>";
         }
 
-        elseif ($this->_mode  === 1)
-            echo "le vehicule"." " .$this->_marque. " " .$this->_modele. " est demarré<br>";
+        elseif ($this->_mode  = 1)
+            echo "le vehicule"." " .$this->_marque. " " .$this->_modele. " est demarré <br>";
         }
    
     }
 
 
 $voiture1 = new voiture("peugeot","308","5","0","1");
-echo $voiture1->verifieStatut();
- 
+echo $voiture1->verifieStatut(); 
+echo $voiture1->setvitesse(0);
+
+
 
 
 

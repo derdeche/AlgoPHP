@@ -28,7 +28,7 @@
             $this->_modele = $modele;
             $this->_nbPortes = $nbPortes;
             $this->_vitesseActuelle = 0;
-            $this->_statut = 1;
+            $this->_statut = 0;
         }
 
         public function getMarque(): string

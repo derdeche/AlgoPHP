@@ -28,7 +28,7 @@
             $this->_modele = $modele;
             $this->_nbPortes = $nbPortes;
             $this->_vitesseActuelle = 0;
-            $this->_statut = 0;
+            $this->_statut = 1;
         }
 
         public function getMarque(): string
@@ -68,6 +68,7 @@
         {
             return $this->_vitesseActuelle;
             
+            
         }
 
         public function setvitesse($vitesseActuelle)
@@ -104,26 +105,6 @@
                 echo "le véhicule" . " " . $this->_marque . " " . $this->_modele ." ".$this->_nbPortes."portes". " est demarré  <br>";
         }
     
- 
-        public function verifvitesse()
-        {
-            if ($this->_statut== 1 && $this->_vitesseActuelle>120)
-            {
-                echo "vous avez depassé la vitesse autoriser, vous devez ralentir<br>";
-            }
-
-            else
-            
-            {
-                if($this->_vitesseActuelle<120)
-                {
-                echo" vous pouvez accelerer";
-                }
-                
-            }
-        }
-
-     
 
         public function demarrage()
         {
@@ -134,25 +115,38 @@
             }
             else
             {
-                echo " le véhicule est deja demarré";
+                echo " le véhicule est deja demarré<br>";
             }
         }
 
         public function acceleration($vitesse)
         {
-          $this->_vitesseActuelle += $vitesse ;
+            $this->_vitesseActuelle += $vitesse ;
                 echo "le véhicule"." ". $this->_marque." ".$this->_modele. " ". "accélere de". $vitesse  ."km/h<br>";
+                echo "la vitesse est de". $this->_vitesseActuelle."km/h<br>";
         }
 
+        public function stopper()
+        {
+            if($this->_statut==1)
+            {
+                $this->_statut==0;
+                echo "le véhicule est stoppé";
+            }
+        }
+        
     }
     $voiture1 = new voiture("peugeot", "308", "5");
     //$voiture1->verifieStatut(); 
-    $voiture1->demarrage();
+    $voiture1->demarrage(). "<br>";
     $voiture1->acceleration(50);   
-    echo $voiture1->getvitesse() . "<br>";  
-    $voiture1->acceleration(30);  
-    echo $voiture1->getvitesse(). "<br>";   
-    //$voiture1->verifvitesse();
+    //echo $voiture1->getvitesse() . "<br>";  
+    $voiture1->acceleration(90);  
+    //echo $voiture1->getvitesse(). "<br>";   
+    $voiture1->stopper();
+
+
+    
 
     
 

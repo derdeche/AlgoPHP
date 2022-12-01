@@ -73,7 +73,7 @@
         public function setvitesse($vitesseActuelle)
         {
             $this->_vitesseActuelle = $vitesseActuelle;
-            return  "la vitesse est de" . " " . $this->_vitesseActuelle . "" . "km/h";
+            return  $this;
         }
 
 
@@ -91,7 +91,7 @@
         {
             $this->_statut = $statut;
 
-            return " le vehicule est démarré";
+            return $this;
         }
 
         public function verifieStatut()
@@ -123,25 +123,14 @@
             }
         }
 
-        public function acceleration($vitesse)
-        {
-            if ($this->_statut== 1)
-            {
-                echo "le véhicule"." ". $this->_marque." ".$this->_modele. " ". "accélere de". $this->_vitesseActuelle."km/h<br>"; 
-            }
-            else
-            {
-                echo "le véhicule"." ". $this->_marque." ".$this->_modele. " "." est stoppé<br>";
-            }
-
-        }
+     
 
         public function demarrage()
         {
             if($this->_statut ==0)
             {
                 $this->_statut ==1;
-                echo "le véhicule " . " " . $this->_marque . " " . $this->_modele ." ".$this->_nbPortes.""."portes". "est démarré<br>";
+                echo "le véhicule " . " " . $this->_marque . " " . $this->_modele ." ".$this->_nbPortes." "."portes"." ". "démarre<br>";
             }
             else
             {
@@ -149,15 +138,21 @@
             }
         }
 
-        
+        public function acceleration($vitesse)
+        {
+          $this->_vitesseActuelle += $vitesse ;
+                echo "le véhicule"." ". $this->_marque." ".$this->_modele. " ". "accélere de". $vitesse  ."km/h<br>";
+        }
 
     }
     $voiture1 = new voiture("peugeot", "308", "5");
     //$voiture1->verifieStatut(); 
     $voiture1->demarrage();
-    //$voiture1->acceleration(50);   
-    $voiture1->setvitesse(130);  
-    $voiture1->verifvitesse();
+    $voiture1->acceleration(50);   
+    echo $voiture1->getvitesse() . "<br>";  
+    $voiture1->acceleration(30);  
+    echo $voiture1->getvitesse(). "<br>";   
+    //$voiture1->verifvitesse();
 
     
 

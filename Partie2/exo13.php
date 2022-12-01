@@ -22,13 +22,13 @@
 
 
 
-        function __construct(string $marque, string $modele, int $nbPortes, float $vitesseActuelle, int $statut)
+        function __construct(string $marque, string $modele, int $nbPortes)
         {
             $this->_marque = $marque;
             $this->_modele = $modele;
             $this->_nbPortes = $nbPortes;
-            $this->_vitesseActuelle = $vitesseActuelle;
-            $this->_statut = $statut;
+            $this->_vitesseActuelle = 0;
+            $this->_statut = 0;
         }
 
         public function getMarque(): string
@@ -115,7 +115,7 @@
             else
             
             {
-                if($this->_statut==1 && $this->_vitesseActuelle<120)
+                if($this->_vitesseActuelle<120)
                 {
                 echo" vous pouvez accelerer";
                 }
@@ -123,7 +123,7 @@
             }
         }
 
-        public function acceleration()
+        public function acceleration($vitesse)
         {
             if ($this->_statut== 1)
             {
@@ -135,12 +135,27 @@
             }
 
         }
+
+        public function demarrage()
+        {
+            if($this->_statut ==0)
+            {
+                $this->_statut ==1;
+                echo "le véhicule " . " " . $this->_marque . " " . $this->_modele ." ".$this->_nbPortes.""."portes". "est démarré<br>";
+            }
+            else
+            {
+                echo " le véhicule est deja demarré";
+            }
+        }
+
         
 
     }
-    $voiture1 = new voiture("peugeot", "308", "5", "130", "1");
-    $voiture1->verifieStatut(); 
-    $voiture1->acceleration();   
+    $voiture1 = new voiture("peugeot", "308", "5");
+    //$voiture1->verifieStatut(); 
+    $voiture1->demarrage();
+    //$voiture1->acceleration(50);   
     $voiture1->setvitesse(130);  
     $voiture1->verifvitesse();
 

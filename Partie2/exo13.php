@@ -16,19 +16,19 @@
 
         private string $_marque;
         private string $_modele;
-        private  int $_nbportes;
-        private float $_vitesseactuelle;
-        private int $_mode;
+        private  int $_nbPortes;
+        private float $_vitesseActuelle;
+        private int $_statut;
 
 
 
-        function __construct(string $marque, string $modele, int $nbportes, float $vitesseActuelle, int $mode)
+        function __construct(string $marque, string $modele, int $nbPortes, float $vitesseActuelle, int $statut)
         {
             $this->_marque = $marque;
             $this->_modele = $modele;
-            $this->_nbPortes = $nbportes;
-            $this->_vitesseactuelle = $vitesseActuelle;
-            $this->_mode = $mode;
+            $this->_nbPortes = $nbPortes;
+            $this->_vitesseActuelle = $vitesseActuelle;
+            $this->_statut = $statut;
         }
 
         public function getMarque(): string
@@ -55,55 +55,95 @@
 
         public function getNBPortes(): int
         {
-            return $this->_nbportes;
+            return $this->_nbPortes;
         }
 
         public function setNBPortes(int $portes)
         {
-            $this->_nbportes = $portes;
+            $this->_nbPortes = $portes;
             return $this;
         }
 
         public function getvitesse(): float
         {
-            return $this->_vitesseactuelle;
+            return $this->_vitesseActuelle;
             
         }
 
         public function setvitesse($vitesseActuelle)
         {
-            $this->_vitesseactuelle = $vitesseActuelle;
-            return  "la vitesse est de" . " " . $this->_vitesseactuelle . "" . "km/h";
+            $this->_vitesseActuelle = $vitesseActuelle;
+            return  "la vitesse est de" . " " . $this->_vitesseActuelle . "" . "km/h";
         }
 
 
         public function __tostring()
         {
-            return $this->_marque . "" . $this->_modele;
+            return $this->_marque . "" . $this->_modele ." ".$this->_nbPortes;
         }
 
-        public function getMode()
+        public function getStatut()
         {
-            return $this->_mode;
+            return $this->_statut;
         }
 
-        public function setMode($mode)
+        public function setStatut($statut)
         {
-            $this->_mode = $mode;
+            $this->_statut = $statut;
 
             return " le vehicule est démarré";
         }
 
         public function verifieStatut()
         {
-            if ($this->_mode  == 0) {
-                echo "le véhicule " . " " . $this->_marque . " " . $this->_modele . " n'est pas demarré <br>";
-            } elseif ($this->_mode  = 1)
-                echo "le véhicule" . " " . $this->_marque . " " . $this->_modele . " est demarré <br>";
+            if ($this->_statut  == 0) {
+                echo "le véhicule " . " " . $this->_marque . " " . $this->_modele ." ".$this->_nbPortes.""."portes". " n'est pas demarré , la vitesse est 0 km/h <br>";
+            } 
+
+            elseif ($this->_statut  == 1)
+                echo "le véhicule" . " " . $this->_marque . " " . $this->_modele ." ".$this->_nbPortes."portes". " est demarré  <br>";
         }
+    
+ 
+        public function verifvitesse()
+        {
+            if ($this->_statut== 1 && $this->_vitesseActuelle>120)
+            {
+                echo "vous avez depassé la vitesse autoriser, vous devez ralentir<br>";
+            }
+
+            else
+            
+            {
+                if($this->_statut==1 && $this->_vitesseActuelle<120)
+                {
+                echo" vous pouvez accelerer";
+                }
+                
+            }
+        }
+
+        public function acceleration()
+        {
+            if ($this->_statut== 1)
+            {
+                echo "le véhicule"." ". $this->_marque." ".$this->_modele. " ". "accélere de". $this->_vitesseActuelle."km/h<br>"; 
+            }
+            else
+            {
+                echo "le véhicule"." ". $this->_marque." ".$this->_modele. " "." est stoppé<br>";
+            }
+
+        }
+        
+
     }
+    $voiture1 = new voiture("peugeot", "308", "5", "130", "1");
+    $voiture1->verifieStatut(); 
+    $voiture1->acceleration();   
+    $voiture1->setvitesse(130);  
+    $voiture1->verifvitesse();
+
+    
 
 
-    $voiture1 = new voiture("peugeot", "308", "5", "20", "1");
-    echo $voiture1->verifieStatut(); 
-    echo $voiture1->setvitesse(0);   

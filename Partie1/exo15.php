@@ -35,6 +35,9 @@ class Personne {
         return $this->_prénom;
     }
     
+
+    /* function pour calculer l'age*/
+    
     public function Age(){
         $today= new DateTime();
         $Anniversaire = ($this->_Anniversaire);
@@ -88,6 +91,7 @@ class Personne {
 
     echo $p2;
     $p2->setanniversaire("1985-01-17");
+    
 
 
 ?>

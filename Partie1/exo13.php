@@ -9,7 +9,7 @@ Elle devra être affichée avec 2 décimales.<br>
 <?php
 
 $note = ['10','12','8','19','3','16','11','13','9'];
-$moyenne= array_sum($note)/9;
-$moyenne = number_format("$moyenne",2,",",",");
+$moyenne= array_sum($note)/9; /*somme tableau*/
+$moyenne = number_format("$moyenne",2,",",","); /*format d'affichage*/
 echo "$moyenne <br>";
 

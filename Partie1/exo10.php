@@ -12,7 +12,7 @@ $reste = ($MVersé - $MPayer);
  echo "Montant à payer : $MPayer <br> ";
  echo " Montant versé : $MVersé <br>";
  echo " Reste à payer : $reste <br>";
- $billet10 = intdiv($reste, 10);
+ $billet10 = intdiv($reste, 10); /* intdiv reste de division*/
  $reste =  $reste - 10* $billet10;
  $billet5 = intdiv($reste,5);
  $reste = $reste - 5* $billet5;

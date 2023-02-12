@@ -12,8 +12,8 @@
 
 $bday = new DateTime('17.01.1985'); 
 $today = new Datetime(date('21.05.2018')); 
-$diff = date_diff($today,$bday);
-printf(' Age de la personne : %d ans  %d mois  %d jours', $diff->y, $diff->m, $diff->d);
+$diff = date_diff($today,$bday); /*calcule age*/
+printf(' Age de la personne : %d ans  %d mois  %d jours', $diff->y, $diff->m, $diff->d); /*mode d'affichage*/
 printf("\n");
 
 ?>

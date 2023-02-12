@@ -9,7 +9,7 @@ et de langue associée (tableau contenant clé et valeur), dire bonjour aux diff
 
 $prenom = ['Michael' =>'FRA','Virgile' => 'ESP', 'Marie-Claire' => 'ENG'];
 
-ksort($prenom);
+ksort($prenom);/* pour trier en ordre croissant*/
 
 foreach($prenom as $a => $valeur){
     

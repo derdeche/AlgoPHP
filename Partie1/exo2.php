@@ -6,6 +6,6 @@ Ecrire l’instruction permettant de compter le nombre de mots contenus dans cel
 
 <?php
 $phrase = "Notre formation DL commence aujourd'hui";
-$longueur = str_word_count($phrase);
+$longueur = str_word_count($phrase); /*str_word_count pour compter le nombre de mots dans une phrase*/
 
 echo "La phrase « $phrase » contient $longueur mots";

@@ -8,6 +8,6 @@ Afficher l’ancienne et la nouvelle phrase.</p>
 <?php
 $phrase = "Notre formation DL commence aujourd'hui";
 echo $phrase. "<br>";
-echo str_replace ( "aujourd'hui","demain",$phrase);
+echo str_replace ( "aujourd'hui","demain",$phrase); /*str_replace un mot par un autre*/
 
 
